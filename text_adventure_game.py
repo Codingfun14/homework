@@ -2,6 +2,7 @@ import random
 
 total_points = 0
 
+# points function to count the points
 
 def pointers(points):
     global total_points
@@ -9,11 +10,14 @@ def pointers(points):
     print(f"\nyou added {points} points, so now you have a total of {total_points}\n")
     points = 0
 
+# intro to my game welcoming and sending off to the next function
 
 def intro():
     print ("Welcome to the life of an explorer game!!! you are a explorer you is looking for an artifact in a temple but you cannot find the temple so where will you look\n")
     search()
-    
+
+# search function to find out where you head to, to look for the temple
+
 def search():
     
     print ("the places you can look for the temple are in the rainforest, the temple, or you could go gather supplies\n")
@@ -38,6 +42,7 @@ def search():
         print("\n ivalid option, please try again\n")
         search()
 
+# function for inside the temple so you can choose what path to go on
 
 def temple():
     print("you enter the temple and find a couple of ways to go you could go down corridor 1 or 2, or you could look at the pictures on the walls\n")
@@ -60,6 +65,8 @@ def temple():
     else:
         print("\n ivalid option, please try again\n")
         temple()
+
+# artifact1 function this is the fake aritfact room where you can either narrowly escape or die
 
 def artifact1():
     
@@ -91,6 +98,8 @@ def artifact1():
         print("\n ivalid option, please try again\n")
         artifact1()
 
+# aritfact2 function for the correct artifact where you can die to a saw or you can truly win the game
+
 def artifact2():
     
     print("You did it you found the correct temple room!!! you can either take the artifact and run or carefully steal the aritfact with a puzzle\n")
@@ -110,12 +119,17 @@ def artifact2():
         print("\n ivalid option, please try again\n")
         artifact2()
 
+# function to tell the user how they died and what the point totals mean
+
 def end(deathmessage):
     print(f"\nYou unfortunatley died to {deathmessage}, but you had {total_points} points, \nyour point total could be in 1 of three categories\n1.10 points or less and you are a nonexplorer rank \n2.30 points or more you are a decent explorer \n3.50 points or more you are the greatest explorer!!!, \nthank you for playing my game.")
 
-def goodending():
-    print("YOU DID IT!!!!!! YOU ARE THE GREATEST EXPLORER TO EVER LIVE!!!!!!! \nI hope you had fun playing my game")
+# function for the goodending where we congradulate the user
 
+def goodending():
+    print(f"YOU DID IT!!!!!! YOU HAD {total_points} POINTS,YOU ARE THE GREATEST EXPLORER TO EVER LIVE!!!!!!! \nI hope you had fun playing my game")
+
+# to start the game run intro function
 
 intro()
 
